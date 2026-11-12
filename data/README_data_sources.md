@@ -17,14 +17,26 @@
 | **Cakupan Waktu** | 1 Desember 2021 – 30 April 2022 (151 hari) |
 | **Sumber Asal** | 44.384.826 catatan lokasi GPS dari 594.223 perangkat seluler |
 
-### Sumber Pendukung: BPS (Data Populasi)
+### Sumber Pendukung: BPS (Data Populasi Resmi)
 
 | Atribut | Detail |
 |---------|--------|
-| **Penerbit** | Badan Pusat Statistik (BPS) |
-| **Isi** | Populasi per kapanewon di DIY |
-| **Referensi** | Kolom `pop_actual` pada `home_maids_vs_population_kapanewon.csv` |
-| **Penggunaan** | Validasi representativitas spasial |
+| **Penerbit** | Badan Pusat Statistik (BPS) Provinsi D.I. Yogyakarta |
+| **Publikasi** | *Provinsi Daerah Istimewa Yogyakarta Dalam Angka 2022* (Katalog: 1102001.34, ISSN: 0215-2169) |
+| **Tabel Acuan** | Tabel 3.1.1: Jumlah Penduduk Menurut Kecamatan/Kapanewon di D.I. Yogyakarta (Total: 3.687.780 jiwa) |
+| **Tahun Referensi** | 2020 (Sensus Penduduk) / 2021 (Proyeksi BPS) |
+| **URL Resmi** | https://yogyakarta.bps.go.id/publication/2022/02/25/4704047a0cfc4bdf45217823/provinsi-daerah-istimewa-yogyakarta-dalam-angka-2022.html |
+| **Referensi File** | Kolom `pop_actual` pada `home_maids_vs_population_kapanewon.csv` |
+| **Penggunaan** | Validasi representativitas spasial sampel perangkat terhadap populasi sensus |
+
+### Sumber Pendukung: Geoportal Pemda DIY (Batas Wilayah Administrasi)
+
+| Atribut | Detail |
+|---------|--------|
+| **Penerbit** | Pemerintah Daerah Daerah Istimewa Yogyakarta (Dinas Pertanahan dan Tata Ruang DIY) |
+| **Nama Data** | Peta Batas Wilayah Administrasi Kalurahan dan Kapanewon DIY 2023 |
+| **Portal Resmi** | https://geoportal.jogjaprov.go.id/ |
+| **Penggunaan** | Standarisasi kode wilayah BPS/Kemendagri (78 kapanewon/kemantren) |
 
 ---
 

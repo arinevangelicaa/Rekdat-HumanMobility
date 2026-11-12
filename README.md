@@ -54,12 +54,21 @@ Analisis difokuskan pada tiga pertanyaan riset utama terkait pola temporal kehad
 - **Cakupan:** DIY, 1 Desember 2021 – 30 April 2022 (151 hari)
 - **Isi:** Data agregat kehadiran perangkat (harian per grid 500m, per jam per kapanewon) dan arus OD bulanan antar-kapanewon
 
-### Sumber 2: BPS (Data Populasi)
+### Sumber 2: BPS Provinsi D.I. Yogyakarta (Data Populasi Resmi)
 
-- **Penerbit:** Badan Pusat Statistik (BPS)
-- **Isi:** Data populasi per kapanewon di DIY
-- **Referensi dalam dataset:** Kolom `pop_actual` pada file `home_maids_vs_population_kapanewon.csv`
-- **Penggunaan:** Validasi representativitas spasial perangkat terhadap populasi aktual
+- **Penerbit:** Badan Pusat Statistik (BPS) Provinsi D.I. Yogyakarta
+- **Publikasi:** *Provinsi Daerah Istimewa Yogyakarta Dalam Angka 2022* (Katalog BPS: 1102001.34, No. Publikasi: 34000.2201, ISSN: 0215-2169)
+- **Tabel Acuan:** *Tabel 3.1.1: Jumlah Penduduk Menurut Kecamatan/Kapanewon di D.I. Yogyakarta* (Total DIY: 3.687.780 jiwa pada 78 unit wilayah)
+- **URL Akses Resmi:** [https://yogyakarta.bps.go.id/publication/2022/02/25/4704047a0cfc4bdf45217823/provinsi-daerah-istimewa-yogyakarta-dalam-angka-2022.html](https://yogyakarta.bps.go.id/publication/2022/02/25/4704047a0cfc4bdf45217823/provinsi-daerah-istimewa-yogyakarta-dalam-angka-2022.html)
+- **Referensi dalam Dataset:** Kolom `pop_actual` pada file `home_maids_vs_population_kapanewon.csv`
+- **Penggunaan:** Validasi representativitas spasial sampel perangkat terhadap distribusi demografis penduduk resmi
+
+### Sumber Tambahan: Geoportal Pemerintah Daerah DIY (Batas Wilayah)
+
+- **Penerbit:** Pemerintah Daerah D.I. Yogyakarta (Dinas Pertanahan dan Tata Ruang DIY, 2023)
+- **Data Spasial:** *Peta Batas Wilayah Kalurahan/Kelurahan dan Kapanewon/Kemantren D.I. Yogyakarta Tahun 2023*
+- **URL:** [https://geoportal.jogjaprov.go.id/](https://geoportal.jogjaprov.go.id/)
+- **Penggunaan:** Standarisasi kode dan poligon batas administratif 78 kapanewon/kemantren
 
 ---
 
@@ -202,7 +211,11 @@ Dataset JogjaPulse dirilis di bawah lisensi **CC BY 4.0**. Kode analisis dalam r
 
 1. Widyawan (2026). *JogjaPulse: An Aggregated Spatio-Temporal Mobility Dataset for Yogyakarta, Indonesia.* Zenodo. [https://doi.org/10.5281/zenodo.23157460](https://doi.org/10.5281/zenodo.23157460)
 
-2. Deville, P. et al. (2014). Dynamic population mapping using mobile phone data. *PNAS*, 111, 15888–15893. [https://doi.org/10.1073/pnas.1408439111](https://doi.org/10.1073/pnas.1408439111)
+2. Badan Pusat Statistik Provinsi D.I. Yogyakarta (2022). *Provinsi Daerah Istimewa Yogyakarta Dalam Angka 2022*, Katalog BPS: 1102001.34. [https://yogyakarta.bps.go.id/](https://yogyakarta.bps.go.id/)
+
+3. Pemerintah Daerah DIY (2023). *Batas Administrasi Kapanewon/Kemantren D.I. Yogyakarta*. Geoportal Pemda DIY. [https://geoportal.jogjaprov.go.id/](https://geoportal.jogjaprov.go.id/)
+
+4. Deville, P. et al. (2014). Dynamic population mapping using mobile phone data. *PNAS*, 111, 15888–15893. [https://doi.org/10.1073/pnas.1408439111](https://doi.org/10.1073/pnas.1408439111)
 
 3. Kang, Y. et al. (2020). Multiscale dynamic human mobility flow dataset in the U.S. during the COVID-19 epidemic. *Scientific Data*, 7, 390. [https://doi.org/10.1038/s41597-020-00734-5](https://doi.org/10.1038/s41597-020-00734-5)
 
