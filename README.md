@@ -2,6 +2,8 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb)
 
+Link Google Colab : https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb
+
 ## Deskripsi Proyek
 
 Proyek ini menganalisis **pola mobilitas manusia** di Daerah Istimewa Yogyakarta (DIY) menggunakan data agregat kehadiran perangkat seluler dan arus origin–destination (OD) antar-kapanewon. Data bersumber dari dataset [JogjaPulse](https://doi.org/10.5281/zenodo.23157460), yang berisi catatan lokasi GPS teragregasi dari 594.223 perangkat seluler selama periode Desember 2021 – April 2022.
