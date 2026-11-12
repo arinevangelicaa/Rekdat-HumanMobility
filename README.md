@@ -167,18 +167,18 @@ PROJECT AFTER UTS/
 ## Temuan Utama
 
 ### Pola Temporal (RQ1)
-- Kehadiran perangkat mengikuti siklus diurnal yang jelas: minimum sekitar pukul 03:00, naik dari 05:00, dan mencapai plateau antara 11:00–20:00 WIB.
-- Akhir pekan (terutama Minggu) menunjukkan kehadiran yang sedikit lebih rendah dibandingkan hari kerja.
-- Terdapat penurunan signifikan jumlah sampel perangkat dari ~87.000 (Desember 2021) menjadi ~9.000 (April 2022), dengan penurunan tajam pada 1 Januari 2022 dan 16 Februari 2022.
+- **Siklus Diurnal:** Rerata `n_maids` pada baris terpublikasi mencapai titik terendah sekitar pukul 03.00–04.00 dan bertahan pada tingkat lebih tinggi pada rentang 11.00–20.00 WIB. Rerata ini dihitung hanya dari slot kapanewon-jam yang melewati ambang supresi ($k \ge 5$).
+- **Hari Kerja vs Akhir Pekan:** Tingkat kehadiran rata-rata sedikit lebih rendah pada akhir pekan dibandingkan hari kerja, terutama pada siang hari.
+- **Dinamika Cakupan Data:** Terjadi penurunan akumulasi baris terpublikasi dan total observasi harian sepanjang periode (terutama pergeseran tajam pada 1 Januari 2022 dan 16 Februari 2022). Penurunan ini mencerminkan perubahan cakupan data sumber, bukan penurunan mobilitas riil masyarakat.
 
-### Arus OD (RQ2)
-- Kapanewon di pusat kota Yogyakarta dan Sleman mendominasi sebagai tujuan kunjungan lintas-kapanewon.
-- Arus antar-kabupaten/kota menunjukkan interaksi kuat antara Kota Yogyakarta dan Kabupaten Sleman.
-- Pola arus pada Desember 2021–Februari 2022 mengikuti model gravitasi (R² = 0.45–0.58).
+### Arus Kunjungan Asal-Tujuan (RQ2)
+- **Top Destinasi Lintas Wilayah:** Kapanewon tujuan kunjungan inter-zonal terbesar pada periode kualitas tinggi (Desember 2021–Februari 2022) didominasi oleh koridor aglomerasi perkotaan: Depok, Kasihan, Banguntapan, Gamping, dan Mlati.
+- **Interaksi Antar-Wilayah:** Arus pergerakan terbesar terjadi di antara kapanewon yang berbatasan langsung dengan Kota Yogyakarta (koridor Sleman–Bantul).
+- **Penurunan Kualitas Maret–April 2022:** Data arus OD bulan Maret–April ditandai `reduced_quality = True` dengan jumlah pasangan OD terpublikasi yang turun drastis, sehingga dikeluarkan dari analisis kuantitatif utama.
 
-### Normalisasi (RQ3)
-- Normalisasi dengan jumlah perangkat sampel mengubah peringkat beberapa kapanewon tujuan.
-- Rasio perangkat terhadap populasi bervariasi antar kapanewon (contoh: Gondomanan memiliki lebih banyak perangkat teramati daripada penduduk, kemungkinan karena pengunjung/pariwisata).
+### Normalisasi & Representativitas (RQ3)
+- **Pengaruh Normalisasi:** Normalisasi membagi visitor count terhadap perangkat asal yang teramati pada siang hari (`n_homed_maids_daytime`). Normalisasi ini mengubah urutan peringkat destinasi dan mengangkat wilayah yang memiliki daya tarik proporsional tinggi dari daerah asal tertentu.
+- **Korelasi dengan Data BPS:** Terdapat korelasi Pearson positif kuat ($r = 0,7234$, $n = 78$) antara perangkat estimasi rumah (`n_users`) dan populasi resmi BPS (`pop_actual`). Hubungan ini menunjukkan asosiasi spasial yang konsisten antarwilayah, dengan *outlier* utama di Kapanewon Gondomanan (kawasan komersial dan pariwisata).
 
 ---
 
@@ -186,18 +186,18 @@ PROJECT AFTER UTS/
 
 1. **Perangkat ≠ Orang:** Data mencakup perangkat dengan aplikasi yang mengaktifkan lokasi, bukan sampel acak populasi. Satu perangkat belum tentu satu orang.
 
-2. **Supresi (k = 5):** Baris dengan kurang dari 5 perangkat dihapus untuk perlindungan privasi. Baris yang hilang berarti "kurang dari 5 perangkat", **bukan nol**.
+2. **Supresi Privasi ($k = 5$):** Baris dengan kurang dari 5 perangkat unik dihapus untuk perlindungan privasi. Baris yang hilang berarti "kurang dari 5 perangkat", **bukan nol**.
    - Grid sel × hari: 64,6% baris dihapus (6,6% total kehadiran perangkat)
    - Kapanewon × jam: 15,9% baris dihapus (0,7% total kehadiran perangkat)
    - OD: 48,6% baris dihapus (4,7% arus lintas-zona)
 
-3. **Penurunan Sampel:** Rata-rata perangkat per hari turun dari ~87.000 (Des 2021) menjadi ~9.000 (Apr 2022). Perbandingan antar-waktu harus menggunakan nilai ternormalisasi.
+3. **Penurunan Cakupan Data:** Total observasi harian dan baris terpublikasi menurun sepanjang periode observasi (terutama penurunan tajam pada 1 Januari dan 16 Februari 2022). Oleh karena itu, perbandingan antar-waktu tidak boleh membandingkan angka mentah secara langsung, melainkan harus menggunakan nilai proporsi atau *share*.
 
-4. **Kualitas Data Berkurang (Maret–April 2022):** Data OD pada Maret–April ditandai `reduced_quality = True`. Analisis kuantitatif difokuskan pada Desember 2021–Februari 2022.
+4. **Kualitas Data OD Berkurang (Maret–April 2022):** Data OD pada Maret–April 2022 ditandai `reduced_quality = True`. Analisis kuantitatif difokuskan pada Desember 2021–Februari 2022.
 
-5. **n_maids Tidak Aditif:** Jumlah perangkat unik tidak boleh dijumlahkan antar sel, kapanewon, jam, atau hari karena satu perangkat dapat terhitung di beberapa unit.
+5. **`n_maids` Tidak Aditif:** Jumlah perangkat unik tidak boleh dijumlahkan antar sel, kapanewon, jam, atau hari karena satu perangkat dapat terhitung di beberapa unit.
 
-6. **Kunjungan vs Perjalanan:** Arus OD menghitung *visitor counts* (perangkat unik yang mengunjungi suatu tujuan dalam sebulan), bukan jumlah perjalanan.
+6. **Kunjungan Bulanan vs Perjalanan:** Arus OD menghitung *visitor counts* (perangkat unik yang teramati di tujuan setidaknya sekali dalam sebulan pada siang hari), bukan frekuensi perjalanan (*trip counts*).
 
 ---
 
@@ -217,10 +217,10 @@ Dataset JogjaPulse dirilis di bawah lisensi **CC BY 4.0**. Kode analisis dalam r
 
 4. Deville, P. et al. (2014). Dynamic population mapping using mobile phone data. *PNAS*, 111, 15888–15893. [https://doi.org/10.1073/pnas.1408439111](https://doi.org/10.1073/pnas.1408439111)
 
-3. Kang, Y. et al. (2020). Multiscale dynamic human mobility flow dataset in the U.S. during the COVID-19 epidemic. *Scientific Data*, 7, 390. [https://doi.org/10.1038/s41597-020-00734-5](https://doi.org/10.1038/s41597-020-00734-5)
+5. Kang, Y. et al. (2020). Multiscale dynamic human mobility flow dataset in the U.S. during the COVID-19 epidemic. *Scientific Data*, 7, 390. [https://doi.org/10.1038/s41597-020-00734-5](https://doi.org/10.1038/s41597-020-00734-5)
 
-4. de Montjoye, Y.-A. et al. (2013). Unique in the crowd: the privacy bounds of human mobility. *Scientific Reports*, 3, 1376. [https://doi.org/10.1038/srep01376](https://doi.org/10.1038/srep01376)
+6. de Montjoye, Y.-A. et al. (2013). Unique in the crowd: the privacy bounds of human mobility. *Scientific Reports*, 3, 1376. [https://doi.org/10.1038/srep01376](https://doi.org/10.1038/srep01376)
 
-5. Pei, T. et al. (2014). A new insight into land use classification based on aggregated mobile phone data. *Int. J. Geogr. Inf. Sci.*, 28, 1988–2007. [https://doi.org/10.1080/13658816.2014.913794](https://doi.org/10.1080/13658816.2014.913794)
+7. Pei, T. et al. (2014). A new insight into land use classification based on aggregated mobile phone data. *Int. J. Geogr. Inf. Sci.*, 28, 1988–2007. [https://doi.org/10.1080/13658816.2014.913794](https://doi.org/10.1080/13658816.2014.913794)
 
-6. Pappalardo, L. et al. (2023). A dataset to assess mobility changes in Chile following local quarantines. *Scientific Data*, 10, 6. [https://doi.org/10.1038/s41597-022-01893-3](https://doi.org/10.1038/s41597-022-01893-3)
+8. Pappalardo, L. et al. (2023). A dataset to assess mobility changes in Chile following local quarantines. *Scientific Data*, 10, 6. [https://doi.org/10.1038/s41597-022-01893-3](https://doi.org/10.1038/s41597-022-01893-3)
