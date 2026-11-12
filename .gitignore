@@ -1,0 +1,66 @@
+# ===========================
+# Python
+# ===========================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# ===========================
+# Jupyter Notebook
+# ===========================
+
+.ipynb_checkpoints/
+
+# ===========================
+# IDE / Editor
+# ===========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ===========================
+# OS files & Office Temp files
+# ===========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ===========================
+# Course Materials & Internal Files (Not pushed to GitHub)
+# ===========================
+*.pdf
+*.pptx
+Panduan_Lengkap_Project_Human_Mobility.txt
+create_notebook.py
+generate_colab_notebook.py
+presentation/
+
+# ===========================
+# Environment variables
+# ===========================
+
+.env
+.env.local
+.env.*.local
