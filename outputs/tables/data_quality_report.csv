@@ -1,7 +1,7 @@
-Dataset,Total Baris,Nilai Null,Duplikasi,Status Integritas
-presence_kapanewon_hourly,"230,418",0,0,Lolos Validasi
-presence_cell500m_daily,"183,548",0,0,Lolos Validasi
-od_home_visits_kapanewon_monthly,"9,894",0,0,Lolos Validasi
-od_origin_homes_monthly,390,0,0,Lolos Validasi
-home_maids_vs_population_kapanewon,78,0,0,Lolos Validasi
-validation_night_presence_kapanewon,156,0,0,Lolos Validasi
+Dataset,Total Baris,Null Total,Null Supresi yang Diharapkan,Duplikasi,Status
+presence_kapanewon_hourly,230418,0,0,0,Lolos pemeriksaan
+presence_cell500m_daily,183548,0,0,0,Lolos pemeriksaan
+od_home_visits_kapanewon_monthly,9894,0,0,0,Lolos pemeriksaan
+od_origin_homes_monthly,390,0,0,0,Lolos pemeriksaan
+home_maids_vs_population_kapanewon,78,0,0,0,Lolos pemeriksaan
+validation_night_presence_kapanewon,156,0,0,0,Lolos pemeriksaan
