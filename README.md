@@ -1,5 +1,19 @@
 # Pola Kehadiran Perangkat dan Arus Kunjungan Antar-Kapanewon di DIY, Desember 2021–Februari 2022
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb)
+
+## 🚀 Akses Langsung di Google Colab (Instan & Tanpa Unduh Dataset)
+
+Dosen, asisten penguji, maupun rekan mahasiswa dapat menjalankan seluruh analisis ini secara langsung di peramban web (*browser*) **tanpa perlu mengunduh file dataset ke laptop masing-masing**:
+
+👉 **[Buka Notebook di Google Colab](https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb)**
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb)
+
+> 💡 **Fitur Otomatisasi Google Colab:** Sel pertama notebook telah dilengkapi fitur **auto-clone**. Ketika dibuka di Google Colab dan dijalankan (*Runtime > Run all*), Colab akan secara otomatis mengunduh seluruh file CSV dataset dari repositori GitHub ini dalam ~3 detik. Semua 53 sel analitik akan langsung berjalan sukses dari awal hingga akhir tanpa hambatan!
+
+---
+
 ## 📋 Deskripsi Proyek
 
 Proyek ini menganalisis **pola mobilitas manusia** di Daerah Istimewa Yogyakarta (DIY) menggunakan data agregat kehadiran perangkat seluler dan arus origin–destination (OD) antar-kapanewon. Data bersumber dari dataset [JogjaPulse](https://doi.org/10.5281/zenodo.23157460), yang berisi catatan lokasi GPS teragregasi dari 594.223 perangkat seluler selama periode Desember 2021 – April 2022.
