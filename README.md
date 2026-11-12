@@ -2,19 +2,7 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb)
 
-## 🚀 Akses Langsung di Google Colab (Instan & Tanpa Unduh Dataset)
-
-Dosen, asisten penguji, maupun rekan mahasiswa dapat menjalankan seluruh analisis ini secara langsung di peramban web (*browser*) **tanpa perlu mengunduh file dataset ke laptop masing-masing**:
-
-👉 **[Buka Notebook di Google Colab](https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb)**
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/arinevangelicaa/Rekdat-HumanMobility/blob/main/notebooks/human_mobility_analysis.ipynb)
-
-> 💡 **Fitur Otomatisasi Google Colab:** Sel pertama notebook telah dilengkapi fitur **auto-clone**. Ketika dibuka di Google Colab dan dijalankan (*Runtime > Run all*), Colab akan secara otomatis mengunduh seluruh file CSV dataset dari repositori GitHub ini dalam ~3 detik. Semua 53 sel analitik akan langsung berjalan sukses dari awal hingga akhir tanpa hambatan!
-
----
-
-## 📋 Deskripsi Proyek
+## Deskripsi Proyek
 
 Proyek ini menganalisis **pola mobilitas manusia** di Daerah Istimewa Yogyakarta (DIY) menggunakan data agregat kehadiran perangkat seluler dan arus origin–destination (OD) antar-kapanewon. Data bersumber dari dataset [JogjaPulse](https://doi.org/10.5281/zenodo.23157460), yang berisi catatan lokasi GPS teragregasi dari 594.223 perangkat seluler selama periode Desember 2021 – April 2022.
 
@@ -24,7 +12,7 @@ Analisis difokuskan pada tiga pertanyaan riset utama terkait pola temporal kehad
 
 ---
 
-## 👥 Anggota Kelompok
+## Anggota Kelompok
 
 | No. | Nama | NIM |
 |-----|------|-----|
@@ -39,7 +27,7 @@ Analisis difokuskan pada tiga pertanyaan riset utama terkait pola temporal kehad
 
 ---
 
-## 🔬 Pertanyaan Riset
+## Pertanyaan Riset
 
 1. **Bagaimana pola kehadiran perangkat berubah menurut jam dan wilayah di DIY?**  
    Menganalisis profil 24-jam kehadiran perangkat, perbandingan hari kerja vs akhir pekan, dan perbedaan antar kabupaten/kota.
@@ -52,7 +40,7 @@ Analisis difokuskan pada tiga pertanyaan riset utama terkait pola temporal kehad
 
 ---
 
-## 📊 Sumber Data
+## Sumber Data
 
 ### Sumber 1: JogjaPulse (Data Mobilitas)
 
@@ -73,7 +61,7 @@ Analisis difokuskan pada tiga pertanyaan riset utama terkait pola temporal kehad
 
 ---
 
-## 🔧 Metodologi
+## Metodologi
 
 ### Pipeline ETL
 
@@ -98,7 +86,7 @@ Extract → Validate → Transform → Model → Analyze → Visualize
 
 ---
 
-## 📁 Struktur Repositori
+## Struktur Repositori
 
 ```
 PROJECT AFTER UTS/
@@ -132,7 +120,7 @@ PROJECT AFTER UTS/
 
 ---
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 ### Prasyarat
 
@@ -165,7 +153,7 @@ PROJECT AFTER UTS/
 
 ---
 
-## 📈 Temuan Utama
+## Temuan Utama
 
 ### Pola Temporal (RQ1)
 - Kehadiran perangkat mengikuti siklus diurnal yang jelas: minimum sekitar pukul 03:00, naik dari 05:00, dan mencapai plateau antara 11:00–20:00 WIB.
@@ -183,7 +171,7 @@ PROJECT AFTER UTS/
 
 ---
 
-## ⚠️ Keterbatasan
+## Keterbatasan Data
 
 1. **Perangkat ≠ Orang:** Data mencakup perangkat dengan aplikasi yang mengaktifkan lokasi, bukan sampel acak populasi. Satu perangkat belum tentu satu orang.
 
@@ -202,13 +190,13 @@ PROJECT AFTER UTS/
 
 ---
 
-## 📜 Lisensi
+## Lisensi
 
 Dataset JogjaPulse dirilis di bawah lisensi **CC BY 4.0**. Kode analisis dalam repositori ini dibuat untuk keperluan tugas mata kuliah Rekayasa Data, Universitas Gadjah Mada.
 
 ---
 
-## 📚 Referensi
+## Referensi
 
 1. Widyawan (2026). *JogjaPulse: An Aggregated Spatio-Temporal Mobility Dataset for Yogyakarta, Indonesia.* Zenodo. [https://doi.org/10.5281/zenodo.23157460](https://doi.org/10.5281/zenodo.23157460)
 
